@@ -105,8 +105,13 @@ async def on_message(message):
             case _ if Utility.check_for_words('help' , content):
                 await message.channel.send(long_text['help'])
             case _ if Utility.check_for_words( 'fish', content):
-                await message.channel.send(text['fish'], file=discord.File('images/fish.png'),  reference=message)
-                await play_audio(vChannel,'fish', 3)
+                number = random.randrange(0, 100)
+                if number < 99:
+                    await message.channel.send(text['fish'], file=discord.File('images/fish.png'),  reference=message)
+                    await play_audio(vChannel,'fish', 3)
+                else:
+                    await message.channel.send(text['fish_song'], file=discord.File('images/spinning_fish.gif'), reference=message)
+                    await play_audio(vChannel,'fish_song', 150)
             case _ if Utility.check_for_wordss( 'nerd', content):
                 await play_audio(vChannel, 'nerd', 4)
             case _ if Utility.check_for_wordss( ['hello there', 'hallå där'], content):

@@ -9,6 +9,7 @@ class AudioDictionary:
         'cringe': 'audio/posting_cringe.mp3',
         'failed': 'audio/failed.mp3',
         'fish': 'audio/fish.mp3',
+        'fish_song': 'audio/fish_song.mp3',
         'frogs': 'audio/gay_frogs.mp3',
         'innocent': 'audio/innocent.mp3',
         'morbin': 'audio/morbin.mp3',
